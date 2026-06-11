@@ -1,0 +1,10 @@
+# Copy this file to ~/.bashrc.local for machine-specific shell settings:
+#
+#   cp ~/.bashrc.local.example ~/.bashrc.local
+#
+# ~/.bashrc.local is git-ignored and sourced at the end of ~/.bashrc.
+# Put per-machine environment variables, PATH tweaks, and aliases here.
+
+# export PATH="$HOME/some/tool/bin:$PATH"
+# export SOME_API_TOKEN="..."
+# alias work='cd ~/projects/work'

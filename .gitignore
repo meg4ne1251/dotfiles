@@ -1,0 +1,24 @@
+# Machine-specific / secret files - never commit these.
+home/.gitconfig.local
+home/.bashrc.local
+
+# SSH keys and config.
+.ssh/
+
+# OS cruft.
+.DS_Store
+Thumbs.db
+
+# Editor temp / swap files.
+*.swp
+*.swo
+*~
+
+# Backup files.
+*.bak
+
+# install.sh backups.
+.dotfiles-backup/
+
+# Local Claude Code settings.
+.claude/

@@ -1,0 +1,22 @@
+# ~/.inputrc - readline configuration
+
+# Pull in the system defaults first, then override below.
+$include /etc/inputrc
+
+# Up/Down: search history for entries matching what's already typed (prefix).
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+
+# Ctrl+Left / Ctrl+Right: move by word.
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
+
+# Completion behaviour.
+set completion-ignore-case on        # ignore case when completing
+set show-all-if-ambiguous on         # one Tab lists all candidates
+set show-all-if-unmodified on
+set colored-stats on                 # colour completions by file type
+set colored-completion-prefix on
+set mark-symlinked-directories on
+set visible-stats on
+set page-completions off

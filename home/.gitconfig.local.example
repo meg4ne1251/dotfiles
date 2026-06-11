@@ -1,0 +1,9 @@
+# Copy this file to ~/.gitconfig.local and fill in your identity:
+#
+#   cp ~/.gitconfig.local.example ~/.gitconfig.local
+#
+# ~/.gitconfig.local is git-ignored, so your name and email stay out of the
+# public repository. The tracked ~/.gitconfig includes this file.
+[user]
+	name = Your Name
+	email = you@example.com

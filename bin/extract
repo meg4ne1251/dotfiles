@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# extract - unpack many archive formats with a single command.
+#
+# Usage: extract <archive> [archive...]
+set -euo pipefail
+
+if [[ $# -eq 0 ]]; then
+  echo "usage: extract <archive> [archive...]" >&2
+  exit 1
+fi
+
+for archive in "$@"; do
+  if [[ ! -f "$archive" ]]; then
+    echo "extract: '$archive' is not a file" >&2
+    continue
+  fi
+  case "$archive" in
+    *.tar.bz2|*.tbz2) tar xjf "$archive" ;;
+    *.tar.gz|*.tgz)   tar xzf "$archive" ;;
+    *.tar.xz|*.txz)   tar xJf "$archive" ;;
+    *.tar.zst)        tar --zstd -xf "$archive" ;;
+    *.tar)            tar xf  "$archive" ;;
+    *.bz2)            bunzip2 "$archive" ;;
+    *.gz)             gunzip  "$archive" ;;
+    *.xz)             unxz    "$archive" ;;
+    *.zip)            unzip   "$archive" ;;
+    *.rar)            unrar x "$archive" ;;
+    *.7z)             7z x    "$archive" ;;
+    *.Z)              uncompress "$archive" ;;
+    *) echo "extract: don't know how to extract '$archive'" >&2 ;;
+  esac
+done
