@@ -49,6 +49,11 @@
 [rebase]
 	autosquash = true
 
-# Always use SSH for GitHub, even when a remote is set with an HTTPS URL.
-[url "git@github.com:"]
-	insteadOf = https://github.com/
+# Authenticate to GitHub/Gist over HTTPS using the gh CLI's credential helper.
+# (The empty `helper =` first clears any inherited helpers.)
+[credential "https://github.com"]
+	helper =
+	helper = !gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !gh auth git-credential
