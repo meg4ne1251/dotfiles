@@ -51,7 +51,7 @@ log_warn()  { printf "${C_WARN}[WARN]${C_RESET}  %s\n"  "$*" >&2; }
 log_error() { printf "${C_ERROR}[ERR ]${C_RESET}  %s\n" "$*" >&2; }
 
 usage() {
-  sed -n '2,25p' "${BASH_SOURCE[0]}" | sed 's/^#\s\?//'
+  sed -n '2,16p' "${BASH_SOURCE[0]}" | sed 's/^#\s\?//'
 }
 
 # ---------------------------------------------------------------------------

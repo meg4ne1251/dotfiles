@@ -57,3 +57,6 @@
 [credential "https://gist.github.com"]
 	helper =
 	helper = !gh auth git-credential
+[user]
+	name = meg4ne1251
+	email = yuuta171224@gmail.com
